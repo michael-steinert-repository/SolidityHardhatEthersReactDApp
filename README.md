@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# React decentralized Application (dApp)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Contract ABI Specification
+* The Contract Application Binary Interface (ABI) is the standard Way to interact with Contracts in the Ethereum ecosystem
+* ABIs are used for the Interaction from Outside the Blockchain and for Contract-to-Contract Interaction
+* It describes the Interfaces from the Smart Contracts
+* Data is encoded according to its Type, as described in this Specification
+* The Encoding is not self describing and thus requires a Schema in Order to decode
+* Using the higher-level Library Web3.js abstracts most of technical Details, but the ABIs in JSON format are still needed to be provided to Web3.js
+* ABIs are imported in the Front End to interact with the Blockchain
 
-## Available Scripts
+## Dependencies
+### Infura
+* Infura allows interacting with a Network (Blockchain) without having an own Node
+1) Create Project on https://infura.io/
+1) Getting the Project ID from Infura
+1) Pasting Project ID to hard.hat.config.js
+1) Creating an Account in MetaMask Wallet for Test Network Ropsten
+1) Sending through https://faucet.ropsten.be/ 1 ETH to Account
+1) Exporting MetaMask Account with the private Key
+1) After Deploying the Smart Contract on the Test Network Ropsten it is available to see at https://ropsten.etherscan.io/ und his Address (printed after Deployment in the Console)
 
-In the project directory, you can run:
+### Ethers.js
+* The Ethers.js Library aims for Interacting with the Ethereum Blockchain and its Ecosystem  from client-side JavaScript
+* Similar Tool in the Ecosystem is Web3.js
 
-### `npm start`
+### Hardhat
+* Hardhat is an Ethereum development Environment and Framework designed for Full Stack Development
+* Similar Tools in the Ecosystem are Ganache and Truffle
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Ethereum-Waffle
+* Framework for Testing Smart Contracts
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Chai
+* Chai is a BDD (Behavior driven Design) / TDD (Test driven Design) Assertion Library for Node.js, and the Browser
+* It can be paired with any JavaScript Testing Framework
 
-### `npm test`
+### MetaMask
+* Metamask helps to handle Account Management and Connecting the current User to the Blockchain 
+* It enables Users to manage their Accounts and Keys while isolating them from the Site Context
+* Once a User has connected their MetaMask Wallet, it can interact with the globally available Ethereum API (window.ethereum)
+* The Ethereum API (window.ethereum) identifies the Users of web3-compatible Browsers (like MetaMask Users), and allows to request a Transaction Signature
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### OpenZeppelin (Contracts)
+* OpenZeppelin provides Security Products to build, automate, and operate decentralized applications 
+* It contains Implementations of Standards like ERC20 and ERC721.
+* It provides reusable Solidity Components to build Custom Contracts and decentralized Systems
 
-### `npm run build`
+## Setup
+### Configure Hardhat
+1) Runs: npx hardhat
+1) Choose: create a sample project
+1) Taking Default for Project Root
+1) Choose Yes for .gitignore
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Hardhat Commands
+| Command | Description | 
+| --- | --- |
+| npx hardhat compile | To compile the Smart Contracts in the Blockchain and create their ABIs |
+| npx hardhat node | Creating local Network (Blockchain) from initial Node |
+| npx hardhat run scripts/deploy.js --network localhost | Deploying the Smart Contracts into the local Network (with the deploy.js script). When deploy from Hardhat localhost, it automatically use the 0th Account ETH Address for paying Gas |
+| npx hardhat run scripts/deploy.js --network ropsten | Deploying the Smart Contracts into the Ropsten Test Network (with the deploy.js script) |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
