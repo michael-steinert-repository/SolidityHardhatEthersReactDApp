@@ -1,5 +1,10 @@
 # React decentralized Application (dApp)
 
+## Ethereum
+* Ethereum is an Open Source, globally decentralized Computing Infrastructure that executes Smart Contracts
+* It uses an Blockchain to synchronize and store its Changes
+* It uses a Cryptocurrency called Ether to meter and constrain Execution Resource Costs
+
 ## Contract ABI Specification
 * The Contract Application Binary Interface (ABI) is the standard Way to interact with Contracts in the Ethereum ecosystem
 * ABIs are used for the Interaction from Outside the Blockchain and for Contract-to-Contract Interaction
