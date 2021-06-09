@@ -2,7 +2,7 @@
 
 ## Ethereum
 * Ethereum is an Open Source, globally decentralized Computing Infrastructure that executes Smart Contracts
-* It uses an Blockchain to synchronize and store its Changes
+* It uses a Blockchain to synchronize and store its Changes
 * It uses a Cryptocurrency called Ether to meter and constrain Execution Resource Costs
 
 ## Contract ABI Specification
