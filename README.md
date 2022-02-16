@@ -68,9 +68,9 @@
 
 ## Solidity
 ### Events
-* Events causes the Arguments to be stored in the Log of the Transaction
+* Events cause the Arguments to be stored in the Log of the Transaction
 * The Log of the Transaction exists as long as the Block in the Blockchain exists (in Theory forever)
-* Evetns log Changes into the Blockchain and make it true forever
+* Events log Changes into the Blockchain and make it true forever
 
 ### Address
 * Every Account and Smart Contract has an Address
@@ -80,10 +80,11 @@
 * Data Type used to store Associations that allow to get a Value for a corresponding Key
 
 ### Require
-* Convenience Function that guarantees Vailidity of Conditions that cannot be detected before Execution
+* Convenience Function that guarantees Validity of Conditions that cannot be detected before Execution
 
 ### Struct
-* Struct Types are used to represent a Record and allow to create own Data Types
+* Struct Types are used to represent a Record and allow creating own Data Types
 
 ### Enum
 * Enums restrict a Variable to have on of predefined Values
+
